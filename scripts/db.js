@@ -1,16 +1,8 @@
 const Dexie = require('dexie');
 
-class DB {
-    constructor(height, width) {
-        this.height = height;
-        this.width = width;
-      }
-}
-db = new Dexie('main');
-
-// Define a schema
+const db = new Dexie('main');
 db.version(1).stores({
-    friends: 'name, age',
+    item: '++id, name, priority, dueDate, link, info',
 });
 
 export default db;
