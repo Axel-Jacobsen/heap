@@ -51,15 +51,15 @@
       "sourceType": "module",
       "ecmaFeatures": {
         "jsx": true
-      },
-      "rules": {
-        "indent": ["error", 4],
-        "quotes": ["error", "single"],
-        "comma-dangle": ["error", "always"],
-        "no-cond-assign": ["error", "always"],
-        "no-console": "off",
-        "no-var": "error"
       }
+    },
+    "rules": {
+      "indent": ["error", 4],
+      "quotes": ["error", "single"],
+      "comma-dangle": ["error", "always"],
+      "no-cond-assign": ["error", "always"],
+      "no-console": "off",
+      "no-var": "error"
     }
   }
 }
