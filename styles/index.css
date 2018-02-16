@@ -8,6 +8,8 @@ body {
 	font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+/*https://martin.ankerl.com/2009/12/09/how-to-create-random-colors-programmatically/*/
+
 header {
 	position: absolute;
 	width: 500px;

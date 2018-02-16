@@ -8,7 +8,7 @@
   "author": {
     "name": "Axel-Jacobsen",
     "email": "axelnj44@gmail.com",
-    "url": "axel-jacobsen.github.io/heap"
+    "url": "https://axel-jacobsen.github.io/heap"
   },
   "scripts": {
     "test": "xo",
@@ -16,7 +16,7 @@
     "build": "electron-packager . --out=dist --asar --overwrite --all"
   },
   "files": [
-    "index.js",
+    "main.js",
     "index.html",
     "main.css"
   ],
@@ -25,6 +25,7 @@
     "electron"
   ],
   "dependencies": {
+    "dexie": "^2.0.1",
     "electron-debug": "^1.0.0"
   },
   "devDependencies": {
@@ -39,5 +40,26 @@
       "node",
       "browser"
     ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "rules": {
+        "indent": ["error", 4],
+        "quotes": ["error", "single"],
+        "comma-dangle": ["error", "always"],
+        "no-cond-assign": ["error", "always"],
+        "no-console": "off",
+        "no-var": "error"
+      }
+    }
   }
 }
