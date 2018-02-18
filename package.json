@@ -1,65 +1,22 @@
 {
-  "name": "heap",
-  "productName": "Heap",
-  "version": "0.0.0",
-  "description": "Automatically Organized To-Do",
+  "name": "electron-es6-react",
+  "version": "0.1.0",
+  "main": "main.js",
   "license": "MIT",
-  "repository": "Axel-Jacobsen/heap",
-  "author": {
-    "name": "Axel-Jacobsen",
-    "email": "axelnj44@gmail.com",
-    "url": "https://axel-jacobsen.github.io/heap"
-  },
+  "repository": "b52/electron-es6-react",
   "scripts": {
-    "test": "xo",
-    "start": "electron .",
-    "build": "electron-packager . --out=dist --asar --overwrite --all"
+    "start": "electron -r babel-register ."
   },
-  "files": [
-    "main.js",
-    "index.html",
-    "main.css"
-  ],
-  "keywords": [
-    "electron-app",
-    "electron"
-  ],
   "dependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-register": "^6.3.13",
     "dexie": "^2.0.1",
-    "electron-debug": "^1.0.0"
+    "electron-debug": "^1.5.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "devDependencies": {
-    "devtron": "^1.1.0",
-    "electron-packager": "^8.0.0",
-    "electron": "^1.3.3",
-    "xo": "^0.16.0"
-  },
-  "xo": {
-    "esnext": true,
-    "envs": [
-      "node",
-      "browser"
-    ]
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "rules": {
-      "indent": ["error", 4],
-      "quotes": ["error", "single"],
-      "comma-dangle": ["error", "always"],
-      "no-cond-assign": ["error", "always"],
-      "no-console": "off",
-      "no-var": "error"
-    }
+    "electron": "^1.4.3"
   }
 }

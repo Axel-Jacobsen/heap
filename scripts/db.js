@@ -1,8 +1,10 @@
 const Dexie = require('dexie');
 
 const db = new Dexie('main');
+
 db.version(1).stores({
-    item: '++id, name, priority, dueDate, link, info',
+    items: '++id, name, priority, dueDate, link, description, creationTime',
+    archives: 'id, name, priority, dueDate, link, description, creationTime',
 });
 
 export default db;
