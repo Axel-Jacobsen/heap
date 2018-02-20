@@ -1,7 +1,8 @@
 'use babel';
 
 import React from 'react';
-import Item from './Item';
+import ItemTable from './ItemTable';
+
 import db from '../scripts/db'
 
 export default class Main extends React.Component {
@@ -12,24 +13,9 @@ export default class Main extends React.Component {
     };
   }
 
+  // reload from db
   componentDidMount() {
-    this.dbToState();
-  }
-
-  render() {
-    const items = this.state.items;
-
-    const html_items = items.map(item => 
-        <Item className='item' key={item.id} value={item}></Item> // to be moved to items.js
-      )
-    console.log(html_items);
-    
-    return (
-      <div>
-        {html_items}
-        <b>fff</b>
-      </div>
-    )
+    this.dbToState();    
   }
 
   async dbToState() {
@@ -39,4 +25,10 @@ export default class Main extends React.Component {
     })
   }
 
+  render() {    
+    return (
+      <ItemTable items={this.state.items}/>
+    )
+  }
+  
 }
