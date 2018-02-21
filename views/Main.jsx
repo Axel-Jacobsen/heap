@@ -1,13 +1,16 @@
 'use babel';
 
-import React from 'react';
-import ItemTable from './ItemTable';
-
+import React from 'react'
+import ItemTable from './ItemTable'
+import TopBar from './TopBar'
 import db from '../scripts/db'
 
+/*
+  Main class. Calls 'TopBar' component and 'ItemList' component
+*/
 export default class Main extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       items: [],
     };
@@ -15,7 +18,7 @@ export default class Main extends React.Component {
 
   // reload from db
   componentDidMount() {
-    this.dbToState();    
+    this.dbToState()
   }
 
   async dbToState() {
@@ -25,10 +28,13 @@ export default class Main extends React.Component {
     })
   }
 
-  render() {    
+  render() {
     return (
-      <ItemTable items={this.state.items}/>
+      <div>
+        <TopBar />
+        <ItemTable items={this.state.items} />
+      </div>
     )
   }
-  
+
 }
