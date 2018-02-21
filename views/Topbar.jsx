@@ -14,7 +14,7 @@ export default class Topbar extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="TopBar">
                 <AddItem />
                 <DateTime />
             </div>

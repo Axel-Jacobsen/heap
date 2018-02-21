@@ -19,7 +19,7 @@ export default class ItemTable extends React.Component {
     )
 
     return (
-      <div>
+      <div className="itemList">
         {html_items}
       </div>
     )
