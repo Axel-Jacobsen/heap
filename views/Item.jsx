@@ -1,11 +1,15 @@
-// Class that represents a single list item 
+'use babel'
+
 const React = require('react');
 
-const Item = (props) => {    
+/*
+    Class for each individual item
+*/
+const Item = (props) => {
     return (
         <div className="item">
             <p>{props.value.date} {props.value.name} {props.value.description}</p>
-        </div>    
+        </div>
     )
 }
 

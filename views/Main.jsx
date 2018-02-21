@@ -5,6 +5,9 @@ import ItemTable from './ItemTable'
 import TopBar from './TopBar'
 import db from '../scripts/db'
 
+/*
+  Main class. Calls 'TopBar' component and 'ItemList' component
+*/
 export default class Main extends React.Component {
   constructor(props) {
     super(props)
@@ -25,13 +28,13 @@ export default class Main extends React.Component {
     })
   }
 
-  render() {    
+  render() {
     return (
       <div>
         <TopBar />
-        <ItemTable items={this.state.items}/>
+        <ItemTable items={this.state.items} />
       </div>
     )
   }
-  
+
 }
