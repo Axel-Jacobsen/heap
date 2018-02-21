@@ -1,12 +1,11 @@
 'use babel';
 
-import React from 'react';
-import Item from './Item';
-import db from '../scripts/db'
+import React from 'react'
+import Item from './Item'
 
 export default class ItemTable extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render() {
