@@ -40,7 +40,9 @@ export default class DateTime extends React.Component {
         }
         return minute;
     }
-
+    
+    // Could write methods for each individual datetime object retrieved from state, but it will 
+    // increase the size of the file. Considering it though just for readability...
     render() {
         return (
             <div>

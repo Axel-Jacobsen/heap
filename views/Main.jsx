@@ -16,9 +16,13 @@ export default class Main extends React.Component {
     };
   }
 
-  // reload from db
+  // reload items from db
   componentDidMount() {
     this.dbToState()
+  }
+
+  componentWillUnmount() {
+    this.db.close()
   }
 
   async dbToState() {
