@@ -1,10 +1,18 @@
+@import 'item';
+@import 'topbar';
+
 body {
     background-color: #7998f3;
     -webkit-app-region: drag;
     margin-top: 1rem;
-    -titlebarAppearsTransparent: YES
+    width: 100%;
 }
 
 button {
     -webkit-app-region: no-drag;
+}
+
+.horizontal {
+    display: flex;
+    align-items: center;
 }
