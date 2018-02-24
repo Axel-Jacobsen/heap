@@ -5,6 +5,10 @@ import ItemTable from './ItemTable'
 import TopBar from './TopBar'
 import db from '../scripts/db'
 
+
+// https://github.com/jamiebuilds/react-loadable //
+
+
 /*
   Main class. Calls 'TopBar' component and 'ItemList' component
 */

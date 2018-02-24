@@ -14,7 +14,7 @@ export default class DateTime extends React.Component {
     componentDidMount() {
         this.timerID = setInterval(
             () => this.tick(),
-            1000
+            500
         );
     }
 
@@ -34,13 +34,10 @@ export default class DateTime extends React.Component {
         return monthNames[month]
     }
 
-    getMinute(minute) {
-        if (minute < 10) {
-            minute = "0" + minute;
-        }
-        return minute;
+    getMinute(i) {
+        return (i < 10) ? "0" + i : i;
     }
-    
+
     // Could write methods for each individual datetime object retrieved from state, but it will 
     // increase the size of the file. Considering it though just for readability...
     render() {
