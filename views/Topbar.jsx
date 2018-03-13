@@ -9,14 +9,13 @@ import DateTime from './DateTime'
 */
 export default class Topbar extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
 
     render() {
         return (
-            <div className="horizontal topbar">
-                <AddItem />
-                <DateTime />
+            <div className="center topbar">
+                {this.props.children}
             </div>
         )
     }

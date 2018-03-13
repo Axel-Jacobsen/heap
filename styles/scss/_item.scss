@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
 
 .item {
-    width: 75%;
-    margin: 15px;
     font: 25px "Quicksand";
+    font-weight: 300;
+    display: flex;
 
     .date {
         width: 20%;
@@ -11,12 +11,10 @@
 
     .name {
         width: 40%;
-        text-align: center;
     }
 
     .description {
         width: 40%;
-        text-align: center;
     }
 
 }

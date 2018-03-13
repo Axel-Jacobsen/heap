@@ -1,21 +1,33 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400");
 .item {
-  width: 75%;
-  margin: 15px;
-  font: 25px "Quicksand"; }
+  font: 25px "Quicksand";
+  font-weight: 300;
+  display: flex; }
   .item .date {
     width: 20%; }
   .item .name {
-    width: 40%;
-    text-align: center; }
+    width: 40%; }
   .item .description {
-    width: 40%;
-    text-align: center; }
+    width: 40%; }
+
+.itemlist {
+  margin-top: 30px; }
 
 .topbar {
-  width: 75%;
-  margin: 15px;
-  font: 25px "Quicksand"; }
+  font: 25px "Quicksand";
+  display: flex;
+  align-items: baseline; }
+  .topbar .datetime {
+    display: flex;
+    width: 60%; }
+    .topbar .datetime .time {
+      width: 33%; }
+    .topbar .datetime .currentdate {
+      width: 67%; }
+  .topbar .add {
+    width: 40%;
+    font-size: 35px;
+    font-weight: 300; }
 
 body {
   background-color: #7998f3;
@@ -26,8 +38,9 @@ body {
 button {
   -webkit-app-region: no-drag; }
 
-.horizontal {
-  display: flex;
-  align-items: center; }
+.center {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%; }
 
 /*# sourceMappingURL=main.css.map */

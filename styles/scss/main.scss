@@ -1,4 +1,5 @@
 @import 'item';
+@import 'itemlist';
 @import 'topbar';
 
 body {
@@ -12,7 +13,8 @@ button {
     -webkit-app-region: no-drag;
 }
 
-.horizontal {
-    display: flex;
-    align-items: center;
+.center {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
 }

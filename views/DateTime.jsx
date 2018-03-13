@@ -38,13 +38,11 @@ export default class DateTime extends React.Component {
         return (i < 10) ? "0" + i : i;
     }
 
-    // Could write methods for each individual datetime object retrieved from state, but it will 
-    // increase the size of the file. Considering it though just for readability...
     render() {
         return (
-            <div>
+            <div className="datetime">
                 <div className="time"> {this.state.date.getHours()}:{this.getMinute(this.state.date.getMinutes())} </div>
-                <div className="date"> {this.getMonth(this.state.date.getMonth())} {this.state.date.getDate()}, {this.state.date.getFullYear()} </div>
+                <div className="currentdate"> {this.getMonth(this.state.date.getMonth())} {this.state.date.getDate()}, {this.state.date.getFullYear()} </div>
             </div>
         );
     }

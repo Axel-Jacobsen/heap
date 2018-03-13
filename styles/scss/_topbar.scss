@@ -1,5 +1,26 @@
 .topbar {
-    width: 75%;
-    margin: 15px;
     font: 25px "Quicksand";
+    display: flex;
+    align-items: baseline;
+
+    .datetime {
+        display: flex;
+        width: 60%;
+
+        .time {
+            width: 33%;
+        }
+    
+        .currentdate {
+            width: 67%;
+        }
+    
+    }
+
+    .add {
+        width: 40%;
+        font-size: 35px;
+        font-weight: 300;
+    }
+
 }
