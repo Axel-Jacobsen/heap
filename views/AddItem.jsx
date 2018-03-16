@@ -7,27 +7,24 @@ export default class AddItem extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.state = {
-            formInput: {}
-        }
+        this.state = {}
     }
 
     handleSubmit(e) {
         e.preventDefault();
         this.addFormInput("creationTime", new Date().getTime())
-        this.props.addItem(this.state.formInput);
+        this.props.addItem(this.state);
     }
 
     handleChange(e) {
-        console.log(e.target.name, e.target.value);
         this.addFormInput(e.target.name, e.target.value)
+        console.log(e.target.name, e.target.value);
+        
     }
 
     addFormInput(field, val) {
-        let formInput = this.state.formInput;
-        formInput[field] = val;
         this.setState({
-            formInput: formInput
+            [field]: val
         })
     }
 

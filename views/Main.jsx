@@ -44,32 +44,12 @@ export default class Main extends React.Component {
   }
 
   addItem(item) {
-    // Add the item to the db. This will give the item a unique primary key, returned
-    // by the add operation. Assign that key to the object, and add the object to the state.
-    let updatedItems = this.state.items;
-    console.log(updatedItems);
+    let updatedItems = this.state.items.splice();
     item.hash = this.hashItem(item);
-
-    db.items.add(item)
-      // .then(id => {
-      //     console.log('item.id = ', id);
-      //     this.dbToState();
-      // })
+    return db.items.add(item)
       .then(id => {
-        item.id = id;
-        console.log('item.id = ', item.id)
-        updatedItems.push(item);
-        this.setState({
-          items: updatedItems
-        })
-        return Promise.resolve(item.id)
-      })
-      .catch(err => {
-        if (err.stack.includes("ConstraintError: Unable to add key to index 'hash'")) {
-          console.error("This is a duplicate")
-        } else {
-          throw err;
-        }
+          console.log('item.id = ', id);
+          this.dbToState();
       })
   }
 
