@@ -19,7 +19,7 @@ import sha from 'sha.js'
 export default class Main extends React.Component {
   constructor(props) {
     super(props)
-    this.addItem = this.addItem.bind(this);
+    this.addItemToDb = this.addItemToDb.bind(this);
     this.state = {
       items: [],
     };
@@ -43,7 +43,7 @@ export default class Main extends React.Component {
     })
   }
 
-  addItem(item) {
+  addItemToDb(item) {
     let updatedItems = this.state.items.splice();
     item.hash = this.hashItem(item);
     return db.items.add(item)
@@ -69,7 +69,7 @@ export default class Main extends React.Component {
       <div>
         <TopBar>
           <DateTime />
-          <AddItem addItem={this.addItem} />
+          <AddItem addItemToDb={this.addItemToDb} />
         </TopBar>
         <ItemTable items={this.state.items} />
       </div>
