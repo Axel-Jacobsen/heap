@@ -67,10 +67,7 @@ export default class Main extends React.Component {
   render() {
     return (
       <div>
-        <TopBar>
-          <DateTime />
-          <AddItem addItemToDb={this.addItemToDb} />
-        </TopBar>
+        <TopBar addItemToDb={this.addItemToDb} />
         <ItemTable items={this.state.items} />
       </div>
     )

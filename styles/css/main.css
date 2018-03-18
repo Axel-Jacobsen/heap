@@ -2,7 +2,8 @@
 .item {
   font: 25px "Quicksand";
   font-weight: 300;
-  display: flex; }
+  display: flex;
+  border-radius: 8px; }
   .item .date {
     width: 20%; }
   .item .name {
@@ -27,7 +28,55 @@
   .topbar .add {
     width: 40%;
     font-size: 35px;
-    font-weight: 300; }
+    font-weight: 300;
+    user-select: none;
+    cursor: pointer; }
+  .topbar .add:hover {
+    color: #494848; }
+
+input {
+  border: none;
+  background-color: #b2c0eb;
+  padding: 12px;
+  margin: 3px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 14px; }
+
+input:focus {
+  background-color: #C0D0FF; }
+
+input[type=number] {
+  width: 3rem;
+  text-align: center; }
+
+.itemForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  animation: foo-keyframe 175ms cubic-bezier(0.4, 0, 0.2, 1); }
+
+#dueDay {
+  border-radius: 4px 0px 0px 4px;
+  border-right: 1px solid #ababe0;
+  margin-right: 0; }
+
+#dueMonth {
+  border-radius: 0px 4px 4px 0px;
+  margin-left: 0; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #929496;
+  text-shadow: none;
+  -webkit-text-fill-color: initial; }
 
 body {
   background-color: #7998f3;
@@ -35,7 +84,7 @@ body {
   margin-top: 1rem;
   width: 100%; }
 
-button {
+input, button {
   -webkit-app-region: no-drag; }
 
 .center {

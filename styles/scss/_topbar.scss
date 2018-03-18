@@ -21,6 +21,12 @@
         width: 40%;
         font-size: 35px;
         font-weight: 300;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .add:hover {
+        color: #494848;
     }
 
 }

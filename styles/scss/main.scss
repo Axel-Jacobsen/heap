@@ -1,6 +1,7 @@
 @import 'item';
 @import 'itemlist';
 @import 'topbar';
+@import 'additem';
 
 body {
     background-color: #7998f3;
@@ -9,7 +10,7 @@ body {
     width: 100%;
 }
 
-button {
+input, button {
     -webkit-app-region: no-drag;
 }
 

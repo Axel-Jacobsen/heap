@@ -4,6 +4,7 @@
     font: 25px "Quicksand";
     font-weight: 300;
     display: flex;
+    border-radius: 8px;
 
     .date {
         width: 20%;
@@ -16,5 +17,8 @@
     .description {
         width: 40%;
     }
-
 }
+
+// .item:hover {
+//     background-color: rgb(143, 184, 196);
+// }

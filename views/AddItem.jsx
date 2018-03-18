@@ -42,7 +42,7 @@ export default class AddItem extends React.Component {
         const showForm = this.state.showForm;
 
         return (
-            <div>
+            <div className="addSection">
                 <p className="add" onClick={this.toggleShowForm}>
                     +
                 </p>

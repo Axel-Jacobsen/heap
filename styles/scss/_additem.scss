@@ -1,0 +1,53 @@
+@import "../../node_modules/@material/animation/variables";
+
+input {
+    border: none;
+    background-color: rgb(178, 192, 235);
+    padding: 12px;
+    margin: 3px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    background-color: #C0D0FF;
+}
+
+input[type=number] {
+    width: 3rem;
+    text-align: center;
+}
+
+.itemForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    animation: foo-keyframe 175ms $mdc-animation-standard-curve-timing-function;
+}
+
+#dueDay {
+    border-radius: 4px 0px 0px 4px;
+    border-right: 1px solid rgb(171, 171, 224);
+    margin-right: 0;
+}
+
+#dueMonth {
+    border-radius: 0px 4px 4px 0px;
+    margin-left: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+    color: #929496;
+    text-shadow: none;
+    -webkit-text-fill-color: initial;
+}
