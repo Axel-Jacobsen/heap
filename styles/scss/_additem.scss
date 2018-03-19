@@ -1,5 +1,3 @@
-@import "../../node_modules/@material/animation/variables";
-
 input {
     border: none;
     background-color: rgb(178, 192, 235);
@@ -25,6 +23,7 @@ input[type=number] {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 #dueDay {

@@ -85,25 +85,24 @@ export default class Topbar extends React.Component {
         const showForm = this.state.showForm
 
         return (
-            <div className="center">
+            <div className="center paper">
                 <div className="topbar">
                     <DateTime />
                     <p className="add" onClick={this.toggleShowForm}>+</p>
                 </div>
 
                 { showForm ? (
-                        <form onSubmit={this.handleSubmit} id="itemForm" className="itemForm">
-                            <input id="name" name="name" type="text" placeholder="name" onChange={this.handleChange} autoFocus />
-                            <input id="description" name="description" type="text" placeholder="description" onChange={this.handleChange} />
-                            <input id="dueDay" name="dueDay" type="number" placeholder="dd" onChange={this.handleChange} />
-                            <input id="dueMonth" name="dueMonth" type="number" placeholder="mm" onChange={this.handleChange} />
-                            <input id="priority" name="priority" type="number" placeholder="!" onChange={this.handleChange} />
-                            <input type="submit" value="submit" />
-                        </form>
+                    <form onSubmit={this.handleSubmit} id="itemForm" className="itemForm">
+                        <input id="name" name="name" type="text" placeholder="name" onChange={this.handleChange} autoFocus />
+                        <input id="description" name="description" type="text" placeholder="description" onChange={this.handleChange} />
+                        <input id="dueDay" name="dueDay" type="number" placeholder="dd" onChange={this.handleChange} />
+                        <input id="dueMonth" name="dueMonth" type="number" placeholder="mm" onChange={this.handleChange} />
+                        <input id="priority" name="priority" type="number" placeholder="!" onChange={this.handleChange} />
+                        <input type="submit" value="submit" />
+                    </form>
                     )
                     : null
                 }
-
             </div>
         )
     }

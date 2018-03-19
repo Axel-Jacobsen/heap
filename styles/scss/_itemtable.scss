@@ -1,0 +1,30 @@
+@import 'variables';
+
+.itemtable {
+    margin-top: 30px;
+    // padding: 0 0 15% 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.columnNames {
+    font: 23px "Quicksand";
+    font-weight: 300;
+    color: #272626;
+    display: flex;
+    margin-top: 0px;
+
+    .nameCol {
+        width: $nameColumnWidth;
+    }
+
+    .descriptionCol {
+        width: $descriptionColumnWidth;
+    }
+
+    .dateCol {
+        width: $dateColumnWidth;
+        min-width: 95px;
+    }
+}

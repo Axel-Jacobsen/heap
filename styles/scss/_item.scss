@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
+@import 'variables';
 
 .item {
     font: 25px "Quicksand";
     font-weight: 300;
-    display: flex;
     border-radius: 8px;
-    // padding-left: 10px;
-
-    .date {
-        width: 20%;
-        color: rgb(44, 44, 44);
-    }
 
     .name {
-        width: 40%;
+        width: $nameColumnWidth; //30%;
     }
 
     .description {
-        width: 40%;
+        width: $descriptionColumnWidth; //40%;
+    }
+
+    .date {
+        width: $dateColumnWidth; //20%;
+        min-width: 95px;
     }
 }
 
