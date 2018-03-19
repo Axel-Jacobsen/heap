@@ -23,10 +23,15 @@
         font-weight: 300;
         user-select: none;
         cursor: pointer;
+        margin-bottom: 0;
     }
 
     .add:hover {
         color: #494848;
     }
 
+}
+
+.itemForm {
+    margin-top: 30px;
 }

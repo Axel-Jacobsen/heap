@@ -5,9 +5,11 @@
     font-weight: 300;
     display: flex;
     border-radius: 8px;
+    // padding-left: 10px;
 
     .date {
         width: 20%;
+        color: rgb(44, 44, 44);
     }
 
     .name {
@@ -20,5 +22,5 @@
 }
 
 // .item:hover {
-//     background-color: rgb(143, 184, 196);
+//     background-color: rgb(180, 197, 243);
 // }

@@ -5,7 +5,8 @@ const schema = '++id, name, priority, dueDay, dueMonth, description, creationTim
 const db = new Dexie('main');
 
 db.version(1).stores({
-    items: schema
+    items: schema,
+    archives: schema
 });
 
 export default db;
