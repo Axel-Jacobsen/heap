@@ -3,8 +3,6 @@
 import React from 'react'
 import ItemTable from './ItemTable'
 import TopBar from './TopBar'
-import DateTime from './DateTime'
-import AddItem from './AddItem'
 
 import db from '../scripts/db'
 import sha from 'sha.js'

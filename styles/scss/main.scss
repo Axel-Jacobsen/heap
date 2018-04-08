@@ -23,12 +23,12 @@ input, button {
 
 .horizontal {
     display: flex;
-    justify-content: center;
+    align-items: baseline;
 }
 
 .paper {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #f0f0f0;
     border-radius: 12px;
-    padding-left: 12px;
+    padding: 0 12px 0 12px;
 }

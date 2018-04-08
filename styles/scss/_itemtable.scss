@@ -8,12 +8,17 @@
     flex-direction: column;
 }
 
+.itemtable:last-child {
+    margin-bottom: 20px;
+}
+
 .columnNames {
     font: 23px "Quicksand";
     font-weight: 300;
     color: #272626;
     display: flex;
     margin-top: 0px;
+    justify-content: space-between;
 
     .nameCol {
         width: $nameColumnWidth;

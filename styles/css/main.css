@@ -5,16 +5,20 @@
   justify-content: center;
   flex-direction: column; }
 
+.itemtable:last-child {
+  margin-bottom: 20px; }
+
 .columnNames {
   font: 23px "Quicksand";
   font-weight: 300;
   color: #272626;
   display: flex;
-  margin-top: 0px; }
+  margin-top: 0px;
+  justify-content: space-between; }
   .columnNames .nameCol {
-    width: 170px; }
+    width: 250px; }
   .columnNames .descriptionCol {
-    width: 210px; }
+    width: 300px; }
   .columnNames .dateCol {
     width: 110px;
     min-width: 95px; }
@@ -22,11 +26,12 @@
 .item {
   font: 25px "Quicksand";
   font-weight: 300;
-  border-radius: 8px; }
+  border-radius: 8px;
+  justify-content: space-between; }
   .item .name {
-    width: 170px; }
+    width: 250px; }
   .item .description {
-    width: 210px; }
+    width: 300px; }
   .item .date {
     width: 110px;
     min-width: 95px; }
@@ -34,25 +39,25 @@
 .topbar {
   font: 25px "Quicksand";
   margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center; }
-  .topbar .datetime {
-    display: flex;
-    width: 60%; }
-    .topbar .datetime .time {
-      width: 33%; }
-    .topbar .datetime .currentdate {
-      width: 67%; }
+  justify-content: space-between;
+  vertical-align: middle; }
   .topbar .add {
+    justify-content: space-between;
     font-size: 35px;
     font-weight: 300;
     user-select: none;
     cursor: pointer;
-    margin: 0; }
+    margin: 0;
+    width: 110px;
+    float: right; }
   .topbar .add:hover {
     color: #494848; }
+  .topbar .currenttime {
+    width: 250px;
+    clear: left; }
+  .topbar .currentdate {
+    width: 300px;
+    clear: left; }
 
 .itemForm {
   margin-top: 30px;
@@ -121,12 +126,12 @@ input, button {
 
 .horizontal {
   display: flex;
-  justify-content: center; }
+  align-items: baseline; }
 
 .paper {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #f0f0f0;
   border-radius: 12px;
-  padding-left: 12px; }
+  padding: 0 12px 0 12px; }
 
 /*# sourceMappingURL=main.css.map */

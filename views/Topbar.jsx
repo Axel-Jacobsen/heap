@@ -1,8 +1,8 @@
 'use babel'
 
 import React from 'react'
-import DateTime from './DateTime'
-
+import CurrentTime from './CurrentTime'
+import CurrentDate from './CurrentDate'
 
 /*
     Class for the topbar of the main page. Contains 'AddItem' component and 'DateTime' component
@@ -85,14 +85,15 @@ export default class Topbar extends React.Component {
         const showForm = this.state.showForm
 
         return (
-            <div className="center paper">
-                <div className="topbar">
-                    <DateTime />
-                    <p className="add" onClick={this.toggleShowForm}>+</p>
+            <div className="paper center">
+                <div className="horizontal topbar">
+                    <CurrentTime />
+                    <CurrentDate />
+                    <div className="add" onClick={this.toggleShowForm}>+</div>
                 </div>
 
                 { showForm ? (
-                    <form onSubmit={this.handleSubmit} id="itemForm" className="itemForm">
+                    <form onSubmit={this.handleSubmit} id="itemForm" className="horizontal itemForm">
                         <input id="name" name="name" type="text" placeholder="name" onChange={this.handleChange} autoFocus />
                         <input id="description" name="description" type="text" placeholder="description" onChange={this.handleChange} />
                         <input id="dueDay" name="dueDay" type="number" placeholder="dd" onChange={this.handleChange} />
