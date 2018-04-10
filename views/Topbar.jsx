@@ -86,11 +86,11 @@ export default class Topbar extends React.Component {
 
         return (
             <div className="paper center">
-                <div className="horizontal topbar">
+                <span className="horizontal topbar">
                     <CurrentTime />
                     <CurrentDate />
                     <div className="add" onClick={this.toggleShowForm}>+</div>
-                </div>
+                </span>
 
                 { showForm ? (
                     <form onSubmit={this.handleSubmit} id="itemForm" className="horizontal itemForm">

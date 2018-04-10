@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400");
 .itemtable {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
   flex-direction: column; }
@@ -58,12 +57,6 @@
   .topbar .currentdate {
     width: 300px;
     clear: left; }
-
-.itemForm {
-  margin-top: 30px;
-  display: flex;
-  align-items: baseline;
-  justify-content: center; }
 
 input {
   border: none;
