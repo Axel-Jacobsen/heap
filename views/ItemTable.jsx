@@ -13,14 +13,21 @@ export default class ItemTable extends React.Component {
 
   render() {
     const items = this.props.items;
-
+    
     const html_items = items.map(item =>
-      <Item className='item' key={item.id} value={item}></Item> // to be moved to items.js
+      <Item className='item' key={item.id} value={item} />
     )
 
     return (
-      <div>
-        {html_items}
+      <div className="center">
+        <div className="horizontal columnNames">
+          <p className="nameCol">name</p>
+          <p className="descriptionCol">description</p>
+          <p className="dateCol">due date</p>
+        </div>
+	<div className="paper itemtable">
+          {html_items}
+	</div>
       </div>
     )
   }

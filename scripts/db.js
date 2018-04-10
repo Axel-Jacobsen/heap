@@ -1,10 +1,12 @@
 const Dexie = require('dexie');
 
+const schema = '++id, name, priority, dueDay, dueMonth, description, creationTime, &hash';
+
 const db = new Dexie('main');
 
 db.version(1).stores({
-    items: '++id, name, priority, dueDate, link, description, creationTime',
-    archives: 'id, name, priority, dueDate, link, description, creationTime',
+    items: schema,
+    archives: schema
 });
 
 export default db;
