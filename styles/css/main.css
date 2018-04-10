@@ -13,26 +13,18 @@
   color: #272626;
   display: flex;
   margin-top: 0px;
-  justify-content: space-between; }
-  .columnNames .nameCol {
-    width: 250px; }
-  .columnNames .descriptionCol {
-    width: 300px; }
+  justify-content: space-between;
+  margin: 0 12px 0 12px; }
   .columnNames .dateCol {
-    width: 110px;
     min-width: 95px; }
 
 .item {
   font: 25px "Quicksand";
   font-weight: 300;
   border-radius: 8px;
-  justify-content: space-between; }
-  .item .name {
-    width: 250px; }
-  .item .description {
-    width: 300px; }
+  justify-content: space-between;
+  margin: 0 12px 0 12px; }
   .item .date {
-    width: 110px;
     min-width: 95px; }
 
 .topbar {
@@ -124,7 +116,6 @@ input, button {
 .paper {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #f0f0f0;
-  border-radius: 12px;
-  padding: 0 12px 0 12px; }
+  border-radius: 12px; }
 
 /*# sourceMappingURL=main.css.map */

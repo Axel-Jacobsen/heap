@@ -6,17 +6,10 @@
     font-weight: 300;
     border-radius: 8px;
     justify-content: space-between;
-
-    .name {
-        width: $nameColumnWidth; //30%;
-    }
-
-    .description {
-        width: $descriptionColumnWidth; //40%;
-    }
+    margin: 0 12px 0 12px;
 
     .date {
-        width: $dateColumnWidth; //20%;
+        // width: $dateColumnWidth; //20%;
         min-width: 95px;
     }
 }

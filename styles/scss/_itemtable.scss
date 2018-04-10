@@ -19,17 +19,18 @@
     display: flex;
     margin-top: 0px;
     justify-content: space-between;
+    margin: 0 12px 0 12px;
 
-    .nameCol {
-        width: $nameColumnWidth;
-    }
+    // .nameCol {
+    //     width: $nameColumnWidth;
+    // }
 
-    .descriptionCol {
-        width: $descriptionColumnWidth;
-    }
+    // .descriptionCol {
+    //     width: $descriptionColumnWidth;
+    // }
 
     .dateCol {
-        width: $dateColumnWidth;
+        // width: $dateColumnWidth;
         min-width: 95px;
     }
 }
