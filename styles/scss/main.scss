@@ -1,0 +1,34 @@
+@import 'itemtable';
+@import 'item';
+@import 'topbar';
+@import 'additem';
+
+body {
+    background-color: #7998f3;
+    -webkit-app-region: drag;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+input, button {
+    -webkit-app-region: no-drag;
+}
+
+.center {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    max-width: 900px;
+}
+
+.horizontal {
+    display: flex;
+    align-items: baseline;
+}
+
+.paper {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 0 12px 0 12px;
+}
