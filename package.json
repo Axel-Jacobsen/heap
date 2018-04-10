@@ -20,6 +20,9 @@
     "electron": "^1.4.3"
   },
   "babel": {
-    "presets": ["es2015", "react"]
+    "presets": [
+      "es2015",
+      "react"
+    ]
   }
 }
