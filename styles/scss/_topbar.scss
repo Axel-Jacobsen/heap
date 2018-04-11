@@ -4,8 +4,9 @@
     font: 25px "Quicksand";
     margin-top: 30px;
     justify-content: space-between;
-    vertical-align: middle;
-
+    vertical-align: center;
+    margin-left: 12px;
+    margin-right: 12px;
 
     .add {
         justify-content: space-between;
@@ -15,21 +16,21 @@
         cursor: pointer;
         margin: 0;
         width: $dateColumnWidth;
-        float: right;
+        text-align: right;
+        margin-right: $largeMargin;
     }
 
     .add:hover {
         color: #494848;
     }
 
-    .currenttime {
-        width: $nameColumnWidth;
-        clear: left;
-    }
-
     .currentdate {
         width: $descriptionColumnWidth;
-        clear: left;
+    }
+
+    .currenttime {
+        width: $nameColumnWidth;
+        margin-left: $largeMargin;
     }
 
 }

@@ -20,14 +20,14 @@ export default class ItemTable extends React.Component {
 
     return (
       <div className="center">
-        <div className="horizontal columnNames centerBlock">
-          <p className="nameCol">name</p>
-          <p className="descriptionCol">description</p>
-          <p className="dateCol">due date</p>
+        <div className="horizontal columnNames">
+          <p className="name">name</p>
+          <p className="description">description</p>
+          <p className="date">due date</p>
         </div>
-	<div className="paper itemtable">
-          {html_items}
-	</div>
+        <div className="paper itemtable">
+                {html_items}
+        </div>
       </div>
     )
   }
