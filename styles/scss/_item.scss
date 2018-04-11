@@ -2,25 +2,38 @@
 @import 'variables';
 
 .item {
-    font: 25px "Quicksand";
+    font: 20px "Quicksand";
     font-weight: 300;
     border-radius: 8px;
     justify-content: space-between;
-
-    .name {
-        width: $nameColumnWidth; //30%;
-    }
-
-    .description {
-        width: $descriptionColumnWidth; //40%;
-    }
-
-    .date {
-        width: $dateColumnWidth; //20%;
-        min-width: 95px;
-    }
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
-// .item:hover {
-//     background-color: rgb(180, 197, 243);
-// }
+.item:first-child {
+    margin-top: 12px;
+}
+
+.item:last-child {
+    margin-bottom: 12px;
+}
+
+.name {
+    margin-left: 12px;
+    width: $nameColumnWidth;
+}
+
+.description {
+    width: $descriptionColumnWidth;
+}
+
+.date {
+    width: $dateColumnWidth; //20%;
+    min-width: 95px;
+    text-align: right;
+    margin-right: 12px;
+}
+
+.item:hover {
+    background-color: rgb(180, 197, 243);
+}
