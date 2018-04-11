@@ -8,7 +8,7 @@ import CurrentDate from './CurrentDate'
     Class for the topbar of the main page. Contains 'AddItem' component and 'DateTime' component
 */
 export default class Topbar extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -28,14 +28,14 @@ export default class Topbar extends React.Component {
 
     handleChange(e) {
         let validCheck = this.verifyInput(e)
-        
+
         if (validCheck.status === 'success') {
             this.addFormInput(e.target.name, e.target.value)
             console.log(e.target.name, e.target.value)
         } else {
             console.log(validCheck.message)
         }
-        
+
     }
 
     verifyInput(e) {
@@ -71,7 +71,7 @@ export default class Topbar extends React.Component {
     addFormInput(field, val) {
         let formData = Object.assign({}, this.state.formData)
         formData[field] = val
-        this.setState({formData})
+        this.setState({ formData })
     }
 
     toggleShowForm() {
@@ -92,7 +92,7 @@ export default class Topbar extends React.Component {
                     <div className="add" onClick={this.toggleShowForm}>+</div>
                 </span>
 
-                { showForm ? (
+                {showForm ? (
                     <form onSubmit={this.handleSubmit} id="itemForm" className="horizontal itemForm">
                         <input id="name" name="name" type="text" placeholder="name" onChange={this.handleChange} autoFocus />
                         <input id="description" name="description" type="text" placeholder="description" onChange={this.handleChange} />
@@ -101,7 +101,7 @@ export default class Topbar extends React.Component {
                         <input id="priority" name="priority" type="number" placeholder="!" onChange={this.handleChange} />
                         <input type="submit" value="submit" />
                     </form>
-                    )
+                )
                     : null
                 }
             </div>
