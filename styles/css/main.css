@@ -55,6 +55,9 @@
 .item:hover {
   background-color: #b4c5f3; }
 
+.item-active {
+  background-color: #b4c5f3; }
+
 .topbar {
   font: 25px "Quicksand";
   margin-top: 30px;
