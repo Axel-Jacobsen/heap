@@ -11,6 +11,16 @@ export default class ItemTable extends React.Component {
     render() {
         const items = this.props.items;
 
+        if (items.length === 0) {
+            return (
+                <div className="center">
+                    <div className="paper message">
+                        click the plus sign in the top right to add things to do!
+                    </div>
+                </div>
+            )
+        }
+
         const html_items = items.map(item =>
             <Item className='item'
                 key={item.id}
