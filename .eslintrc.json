@@ -16,7 +16,7 @@
       "quotes": ["error", "single"],
       "comma-dangle": ["error", "always"],
       "no-cond-assign": ["error", "always"],
-      "no-console": "off",
-      "no-var": "error"
+      "no-var": "error",
+      "no-trailing-spaces": "error"
     }
   }
