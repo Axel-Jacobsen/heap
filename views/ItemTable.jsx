@@ -12,7 +12,11 @@ export default class ItemTable extends React.Component {
         const items = this.props.items;
 
         const html_items = items.map(item =>
-            <Item className='item' key={item.id} value={item} />
+            <Item className='item'
+                key={item.id}
+                value={item}
+                removeFromItemList={this.props.removeFromItemList}
+            />
         )
 
         return (
