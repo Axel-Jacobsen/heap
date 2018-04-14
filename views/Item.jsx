@@ -1,6 +1,7 @@
 'use babel'
 
-const React = require('react')
+import React from 'react'
+import db from '../scripts/db'
 
 /*
     Class for each individual item
@@ -11,7 +12,7 @@ export default class Item extends React.Component {
         this.handleClick = this.handleClick.bind(this)
         this.setWrapperRef = this.setWrapperRef.bind(this)
         this.handleClickOutside = this.handleClickOutside.bind(this)
-        this.handleKeyPress = this.handleKeyPress.bind(this)
+        this.handleKeyDown = this.handleKeyDown.bind(this)
 
         this.state = {
             isClicked: false
@@ -20,10 +21,12 @@ export default class Item extends React.Component {
 
     componentDidMount() {
         document.addEventListener('mousedown', this.handleClickOutside)
+        document.addEventListener('keydown', this.handleKeyDown)
     }
 
     componentWillUnmount() {
         document.removeEventListener('mousedown', this.handleClickOutside)
+        document.removeEventListener('keydown', this.handleKeyDown)
     }
 
     setWrapperRef(node) {
@@ -37,19 +40,19 @@ export default class Item extends React.Component {
         }))
     }
 
-    handleClickOutside(event) {
-        if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+    handleClickOutside(e) {
+        if (this.wrapperRef && !this.wrapperRef.contains(e.target)) {
             this.setState(prevState => ({
                 isClicked: false
             }))
         }
     }
 
-    handleKeyPress(event) {
-        console.log('FKC');
-        
-        if (event.key == 'Enter') {
-            alert('enter press here! ')
+    async handleKeyDown(e) {
+        if (e.key == 'Backspace' && this.state.isClicked) {
+            let itemId = this.props.value.id;
+            await db.deleteItemByIdAsync(itemId)
+            this.props.removeFromItemList(itemId)
         }
     }
 
@@ -61,7 +64,7 @@ export default class Item extends React.Component {
         }
 
         return (
-            <div className={itemClasses} onClick={this.handleClick} ref={this.setWrapperRef} onKeyPress={this.handleKeyPress}>
+            <div className={itemClasses} onClick={this.handleClick} ref={this.setWrapperRef} onKeyDown={this.handleKeyDown}>
                 <div className="name"> {this.props.value.name}</div>
                 <div className="description">{this.props.value.description}</div>
                 <div className="date">

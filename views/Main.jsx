@@ -17,7 +17,8 @@ import sha from 'sha.js'
 export default class Main extends React.Component {
     constructor(props) {
         super(props)
-        this.addItemToDb = this.addItemToDb.bind(this);
+        this.addItemToDb = this.addItemToDb.bind(this)
+        this.removeFromItemList = this.removeFromItemList.bind(this)
         this.state = {
             items: [],
         };
@@ -33,22 +34,22 @@ export default class Main extends React.Component {
     }
 
     async dbToState() {
-        const items = await db.items.toArray();
-        console.log(items);
-
+        const items = await db.getAllItemsAsync();
         this.setState({
             items: items,
         })
     }
 
     addItemToDb(item) {
-        let updatedItems = this.state.items.splice();
         item.hash = this.hashItem(item);
-        return db.items.add(item)
+        return db.addItem(item, 'items')
             .then(id => {
-                console.log('item.id = ', id);
                 this.dbToState();
             })
+    }
+
+    removeFromItemList(id) {
+        this.dbToState()
     }
 
     hashItem(item) {
@@ -66,7 +67,7 @@ export default class Main extends React.Component {
         return (
             <div>
                 <TopBar addItemToDb={this.addItemToDb} />
-                <ItemTable items={this.state.items} />
+                <ItemTable items={this.state.items} removeFromItemList={this.removeFromItemList}/>
             </div>
         )
     }
