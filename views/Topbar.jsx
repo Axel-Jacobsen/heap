@@ -24,6 +24,10 @@ export default class Topbar extends React.Component {
         this.addFormInput("creationTime", new Date().getTime())
         this.props.addItemToDb(this.state.formData)
         document.getElementById("itemForm").reset();
+        this.setState({
+            showForm: false,
+            formData: null
+        })
     }
 
     handleChange(e) {
@@ -31,7 +35,6 @@ export default class Topbar extends React.Component {
 
         if (validCheck.status === 'success') {
             this.addFormInput(e.target.name, e.target.value)
-            console.log(e.target.name, e.target.value)
         } else {
             console.log(validCheck.message)
         }
