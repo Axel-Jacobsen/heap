@@ -67,7 +67,7 @@ export default class Main extends React.Component {
         return (
             <div>
                 <TopBar addItemToDb={this.addItemToDb} />
-                <ItemTable items={this.state.items} removeFromItemList={this.removeFromItemList}/>
+                <ItemTable items={this.state.items} removeFromItemList={this.removeFromItemList} />
             </div>
         )
     }
