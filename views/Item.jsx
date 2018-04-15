@@ -50,7 +50,7 @@ export default class Item extends React.Component {
 
     async handleKeyDown(e) {
         if (e.key == 'Backspace' && this.state.isClicked) {
-            let itemId = this.props.value.id;
+            let itemId = this.props.value.id
             await db.deleteItemByIdAsync(itemId)
             this.props.removeFromItemList(itemId)
         }

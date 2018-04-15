@@ -23,7 +23,7 @@ export default class Topbar extends React.Component {
         e.preventDefault()
         this.addFormInput("creationTime", new Date().getTime())
         this.props.addItemToDb(this.state.formData)
-        document.getElementById("itemForm").reset();
+        document.getElementById("itemForm").reset()
         this.setState({
             showForm: false,
             formData: null
@@ -42,26 +42,26 @@ export default class Topbar extends React.Component {
     }
 
     verifyInput(e) {
-        let result = {};
+        let result = {}
         switch (e.target.name) {
             case "dueDay":
                 if (e.target.value < 1 || e.target.value > 31) {
                     result.status = "error"
                     result.message = "day must be between 1 and 31"
                 }
-                break;
+                break
             case "dueMonth":
                 if (e.target.value < 1 || e.target.value > 12) {
                     result.status = "error"
                     result.message = "day must be between 1 and 31"
                 }
-                break;
+                break
             case "priority":
                 if (e.target.value < 1 || e.target.value > 5) {
                     result.status = "error"
                     result.message = "priority must be between 1 and 5"
                 }
-                break;
+                break
         }
 
         if (!result.status) {

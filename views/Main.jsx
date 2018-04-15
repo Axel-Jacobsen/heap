@@ -1,4 +1,4 @@
-'use babel';
+'use babel'
 
 import React from 'react'
 import ItemTable from './ItemTable'
@@ -21,7 +21,7 @@ export default class Main extends React.Component {
         this.removeFromItemList = this.removeFromItemList.bind(this)
         this.state = {
             items: [],
-        };
+        }
     }
 
     // reload items from db
@@ -34,17 +34,17 @@ export default class Main extends React.Component {
     }
 
     async dbToState() {
-        const items = await db.getAllItemsAsync();
+        const items = await db.getAllItemsAsync()
         this.setState({
             items: items,
         })
     }
 
     addItemToDb(item) {
-        item.hash = this.hashItem(item);
+        item.hash = this.hashItem(item)
         return db.addItem(item, 'items')
             .then(id => {
-                this.dbToState();
+                this.dbToState()
             })
     }
 

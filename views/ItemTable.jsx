@@ -1,4 +1,4 @@
-'use babel';
+'use babel'
 
 import React from 'react'
 import Item from './Item'
@@ -9,7 +9,7 @@ export default class ItemTable extends React.Component {
     }
 
     render() {
-        const items = this.props.items;
+        const items = this.props.items
 
         if (items.length === 0) {
             return (
