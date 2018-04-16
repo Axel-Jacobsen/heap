@@ -1,0 +1,124 @@
+{
+  "layers": [
+    [
+      {
+        "type": "line",
+        "verteces": [
+          {
+            "x": 180,
+            "y": 180
+          },
+          {
+            "x": 180,
+            "y": 420
+          },
+          {
+            "x": 420,
+            "y": 420
+          },
+          {
+            "x": 420,
+            "y": 180
+          },
+          {
+            "x": 180,
+            "y": 180
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "type": "line",
+        "verteces": [
+          {
+            "x": 90,
+            "y": 510
+          },
+          {
+            "x": 90,
+            "y": 90
+          },
+          {
+            "x": 510,
+            "y": 90
+          },
+          {
+            "x": 510,
+            "y": 510
+          },
+          {
+            "x": 90,
+            "y": 510
+          }
+        ]
+      },
+      {
+        "type": "close",
+        "verteces": []
+      }
+    ],
+    [
+      {
+        "type": "line",
+        "verteces": [
+          {
+            "x": 60,
+            "y": 540
+          },
+          {
+            "x": 60,
+            "y": 60
+          },
+          {
+            "x": 540,
+            "y": 60
+          },
+          {
+            "x": 540,
+            "y": 540
+          },
+          {
+            "x": 60,
+            "y": 540
+          }
+        ]
+      }
+    ]
+  ],
+  "styles": [
+    {
+      "thickness": 120,
+      "strokeLinecap": "round",
+      "strokeLinejoin": "round",
+      "color": "cdd9ff",
+      "fill": "cdd9ff",
+      "dash": [
+        0,
+        0
+      ]
+    },
+    {
+      "thickness": 60,
+      "strokeLinecap": "round",
+      "strokeLinejoin": "round",
+      "color": "7998f3",
+      "fill": "7998f3",
+      "dash": [
+        0,
+        0
+      ]
+    },
+    {
+      "thickness": 120,
+      "strokeLinecap": "round",
+      "strokeLinejoin": "round",
+      "color": "667297",
+      "fill": "667297",
+      "dash": [
+        0,
+        0
+      ]
+    }
+  ]
+}
