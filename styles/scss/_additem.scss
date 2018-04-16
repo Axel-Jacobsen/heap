@@ -21,9 +21,16 @@ input[type=number] {
 .itemForm {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+#name {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
 }
 
 #dueDay {
@@ -48,4 +55,21 @@ textarea::-webkit-input-placeholder{
     color: #929496;
     text-shadow: none;
     -webkit-text-fill-color: initial;
+}
+
+input.form-error {
+    border: 1px solid #f05e5e;
+    background-color: #f3a9a9;
+}
+
+input.form-error#dueDay {
+    border-right: 1px solid #f05e5e
+}
+
+.error-message {
+    font: 18px "Quicksand";
+    color: #d47878;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    text-align: center;
 }
