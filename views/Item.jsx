@@ -70,7 +70,6 @@ export default class Item extends React.Component {
                 <div className="date">
                     {this.props.value.dueDay} / {this.props.value.dueMonth}
                 </div>
-                {/* <div className="priority">{this.props.value.priority}</div> */}
             </div>
         )
     }
