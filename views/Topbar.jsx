@@ -27,12 +27,23 @@ export default class Topbar extends React.Component {
         })
         if (this.state.formError) return null;
         this.addFormInput('creationTime', new Date().getTime())
+        this.cleanFormNumbers(e)
         this.props.addItemToDb(this.state.formData)
         document.getElementById('itemForm').reset()
         this.setState({
             showForm: false,
             formData: null
         })
+    }
+
+    cleanFormNumbers() {
+        let date = this.state.formData.dueDay
+        let month = this.state.formData.dueMonth
+        let priority = this.state.formData.priority
+        
+        this.addFormInput('dueDay', parseInt(date, 10))
+        this.addFormInput('dueMonth', parseInt(month, 10))
+        this.addFormInput('priority', parseInt(priority, 10))
     }
 
     handleChange(e) {
