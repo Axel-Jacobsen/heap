@@ -35,6 +35,9 @@ export default class Main extends React.Component {
 
     async dbToState() {
         const items = await db.getAllItemsAsync()
+        items.sort((a, b) => {
+            return b.priority - a.priority
+        })
         this.setState({
             items: items,
         })
