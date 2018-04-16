@@ -135,7 +135,7 @@ export default class Topbar extends React.Component {
         const errorMessage = showForm && formError ? (<p className='error-message'>{formError}</p>) : null
 
         return (
-            <div className='paper center'>
+            <div id='topbar' className='paper center'>
                 <span className='horizontal topbar'>
                     <CurrentTime />
                     <CurrentDate />

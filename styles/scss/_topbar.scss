@@ -1,8 +1,12 @@
 @import 'variables';
 
+#topbar {
+    margin-top: 30px;
+}
+
 .topbar {
     font: 25px "Quicksand";
-    margin: 10px 12px;
+    margin: 7px 12px 10px 12px;
     justify-content: space-between;
 
     .add {
