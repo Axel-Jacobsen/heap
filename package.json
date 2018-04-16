@@ -1,22 +1,25 @@
 {
-  "name": "electron-es6-react",
+  "name": "heap",
   "version": "0.1.0",
-  "main": "main.js",
+  "main": "index.js",
   "license": "MIT",
-  "repository": "b52/electron-es6-react",
+  "repository": "Axel-Jacobsen/heap",
   "scripts": {
     "start": "electron -r babel-register .",
-    "test": "mocha"
+    "test": "mocha",
+    "clean": "rm -r ~/Desktop/Left-darwin-x64/ ; rm -r ~/Desktop/Left-linux-x64/ ; rm -r ~/Desktop/Left-win32-x64/ ; echo 'cleaned build location'",
+    "build_osx": "electron-packager . heap --platform=darwin --arch=x64 --out ~/Desktop/ --overwrite --icon=icons/icon.icns && echo 'Built for OSX'",
+    "build_linux": "electron-packager . heap --platform=linux  --arch=x64 --out ~/Desktop/ --overwrite --icon=icons/icon.ico && echo 'Built for LINUX'",
+    "build_win": "electron-packager . heap --platform=win32  --arch=x64 --out ~/Desktop/ --overwrite --icon=icons/icon.ico && echo 'Built for WIN'",
+    "build_pi": "electron-packager . heap --platform=linux  --arch=armv7l --out ~/Desktop/ --overwrite --icon=icons/icon.ico ; echo 'Built for PI'",
+    "build": "npm run clean ; npm run build_osx ; npm run build_linux ; npm run build_win ; npm run build_pi"
   },
   "dependencies": {
-    "@material/animation": "^0.25.0",
-    "@material/form-field": "^0.32.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-register": "^6.3.13",
     "dexie": "^2.0.1",
     "electron-debug": "^1.5.0",
-    "material-components-web": "^0.32.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "sha.js": "^2.4.10"
