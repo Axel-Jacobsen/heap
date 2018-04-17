@@ -8,18 +8,23 @@
     justify-content: space-between;
     margin-left: 12px;
     margin-right: 12px;
+    &:hover {
+        background-color: #b4c5f3;
+    }
+    &:first-child {
+        margin-top: 12px;
+    }
+    &:last-child {
+        margin-bottom: 12px;
+    }
 }
 
-.item:first-child {
-    margin-top: 12px;
-}
-
-.item:last-child {
-    margin-bottom: 12px;
+.item-active {
+    background-color: #b4c5f3;
 }
 
 .name {
-    margin-left: 12px;
+    // margin-left: 12px;
     width: $nameColumnWidth;
 }
 
@@ -28,16 +33,8 @@
 }
 
 .date {
-    width: $dateColumnWidth; //20%;
+    width: $dateColumnWidth;
     min-width: 95px;
     text-align: right;
     margin-right: 12px;
-}
-
-.item:hover {
-    background-color: rgb(180, 197, 243);
-}
-
-.item-active {
-    background-color: rgb(180, 197, 243);
 }

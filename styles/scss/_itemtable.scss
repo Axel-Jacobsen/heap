@@ -1,12 +1,6 @@
 @import 'variables';
 
-.itemtable {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.itemtable:last-child {
+.verticalColumn:last-child {
     margin-bottom: 20px;
 }
 
