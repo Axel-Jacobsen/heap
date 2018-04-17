@@ -5,7 +5,6 @@ import ItemTable from './ItemTable'
 import TopBar from './TopBar'
 
 import db from '../scripts/db'
-import sha from 'sha.js'
 
 
 // https://github.com/jamiebuilds/react-loadable //
@@ -44,7 +43,6 @@ export default class Main extends React.Component {
     }
 
     addItemToDb(item) {
-        item.hash = this.hashItem(item)
         return db.addItem(item, 'items')
             .then(id => {
                 this.dbToState()
@@ -53,17 +51,6 @@ export default class Main extends React.Component {
 
     removeFromItemList(id) {
         this.dbToState()
-    }
-
-    hashItem(item) {
-        let hashItem = {
-            name: item.name,
-            priority: item.priority,
-            dueDay: item.dueDay,
-            dueMonth: item.dueMonth,
-            description: item.description
-        }
-        return sha('sha256').update(JSON.stringify(hashItem)).digest('hex')
     }
 
     render() {

@@ -1,6 +1,6 @@
 const Dexie = require('dexie');
 
-const schema = '++id, name, priority, dueDay, dueMonth, description, creationTime, &hash';
+const schema = '++id, name, priority, dueDay, dueMonth, description, creationTime';
 
 const db = new Dexie('main');
 
