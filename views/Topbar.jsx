@@ -107,8 +107,8 @@ export default class Topbar extends React.Component {
             result = 'the name is required'
         }
 
-        if (!result && !formData.description) {            
-            result = 'the description is required'
+        if (!result && !formData.notes) {            
+            result = 'the notes is required'
         }
 
         if (!result && !formData.dueDay) {
@@ -156,7 +156,7 @@ export default class Topbar extends React.Component {
                 {showForm ? (
                     <form onSubmit={this.handleSubmit} id='itemForm' className='horizontal itemForm'>
                         <input id='name' name='name' type='text' placeholder='name' onChange={this.handleChange} autoFocus />
-                        <input id='description' name='description' type='text' placeholder='description' onChange={this.handleChange} />
+                        <input id='notes' name='notes' type='text' placeholder='notes' onChange={this.handleChange} />
                         <input id='dueDay' name='dueDay' type='number' placeholder='dd' onChange={this.handleChange} />
                         <input id='dueMonth' name='dueMonth' type='number' placeholder='mm' onChange={this.handleChange} />
                         <input id='priority' name='priority' type='number' placeholder='!' onChange={this.handleChange} />

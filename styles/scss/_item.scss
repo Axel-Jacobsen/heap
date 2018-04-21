@@ -8,36 +8,33 @@
     justify-content: space-between;
     margin-left: 12px;
     margin-right: 12px;
-}
-
-.item:first-child {
-    margin-top: 12px;
-}
-
-.item:last-child {
-    margin-bottom: 12px;
-}
-
-.name {
-    margin-left: 12px;
-    width: $nameColumnWidth;
-}
-
-.description {
-    width: $descriptionColumnWidth;
-}
-
-.date {
-    width: $dateColumnWidth; //20%;
-    min-width: 95px;
-    text-align: right;
-    margin-right: 12px;
-}
-
-.item:hover {
-    background-color: rgb(180, 197, 243);
+    &:hover {
+        background-color: #b4c5f3;
+    }
+    &:first-child {
+        margin-top: 12px;
+    }
+    &:last-child {
+        margin-bottom: 12px;
+    }
 }
 
 .item-active {
-    background-color: rgb(180, 197, 243);
+    background-color: #b4c5f3;
+}
+
+.name {
+    // margin-left: 12px;
+    width: $nameColumnWidth;
+}
+
+.notes {
+    width: $notesColumnWidth;
+}
+
+.date {
+    width: $dateColumnWidth;
+    min-width: 95px;
+    text-align: right;
+    margin-right: 12px;
 }

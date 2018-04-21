@@ -15,14 +15,22 @@ input, button {
 }
 
 .center {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .horizontal {
     display: flex;
     align-items: baseline;
+
+    &:first-child {
+        margin-left: $smallMargin;
+    }
+
+    &:last-child {
+        margin-right: $smallMargin;
+    }
 }
 
 .paper {
@@ -30,4 +38,15 @@ input, button {
     background-color: #f0f0f0;
     border-radius: 12px;
     overflow: auto;
+
+    .light {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+        background-color: #b4c5f3;
+    }
+}
+
+.verticalColumn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
