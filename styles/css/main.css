@@ -14,7 +14,7 @@
     margin-bottom: 6px; }
   .columnNames .nameCol {
     width: 250px; }
-  .columnNames .descriptionCol {
+  .columnNames .notesCol {
     width: 300px; }
   .columnNames .dateCol {
     width: 110px;
@@ -47,7 +47,7 @@
 .name {
   width: 250px; }
 
-.description {
+.notes {
   width: 300px; }
 
 .date {
@@ -168,11 +168,12 @@ input, button {
     margin-right: 12px; }
 
 .paper {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #f0f0f0;
   border-radius: 12px;
   overflow: auto; }
   .paper .light {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
     background-color: #b4c5f3; }
 
 .verticalColumn {
