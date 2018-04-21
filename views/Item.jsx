@@ -57,18 +57,32 @@ export default class Item extends React.Component {
     }
 
     render() {
-        let itemClasses = "horizontal item"
+        let clicked = this.state.isClicked
+        let itemClass = "item"
 
-        if (this.state.isClicked) {
-            itemClasses += " item-active"
+        if (clicked) {
+            itemClass += " paper light"
         }
 
         return (
-            <div className={itemClasses} onClick={this.handleClick} ref={this.setWrapperRef} onKeyDown={this.handleKeyDown}>
-                <div className="name"> {this.props.value.name}</div>
-                <div className="description">{this.props.value.description}</div>
-                <div className="date">
-                    {this.props.value.dueDay} / {this.props.value.dueMonth}
+            <div className={itemClass}
+                    onMouseDown={this.handleClick}
+                    ref={this.setWrapperRef}
+                    onKeyDown={this.handleKeyDown}>
+                <div className="horizontal">
+                    <div className="name">{this.props.value.name}</div>
+                    <div className="notes">{this.props.value.notes}</div>
+                    <div className="date">{this.props.value.dueDay} / {this.props.value.dueMonth}</div>
+                </div>
+
+                <div className="horizontal">
+                    {clicked ? (
+                        <div className="horizontal itemDropdown">
+                            <div className="notes">Notes: {this.props.value.notes}</div>
+                        </div>
+                    )
+                        : null
+                    }
                 </div>
             </div>
         )
