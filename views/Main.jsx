@@ -19,7 +19,7 @@ export default class Main extends React.Component {
         this.addItemToDb = this.addItemToDb.bind(this)
         this.removeFromItemList = this.removeFromItemList.bind(this)
         this.state = {
-            items: [],
+            tagCategories: {},
         }
     }
 
@@ -34,11 +34,20 @@ export default class Main extends React.Component {
 
     async dbToState() {
         const items = await db.getAllItemsAsync()
-        items.sort((a, b) => {
-            return b.priority - a.priority
+        const tagCategories = {}
+        
+        items.map(item => {
+            console.log('stuff');
+            console.log(item.tag); console.log(Object.keys(tagCategories));
+
+            if (Object.keys(tagCategories).indexOf(item.tag) < 0) {
+                tagCategories[item.tag] = [item]
+            } else {
+                tagCategories[item.tag] = tagCategories[item.tag].concat([item])
+            }
         })
         this.setState({
-            items: items,
+            tagCategories: tagCategories,
         })
     }
 
@@ -57,7 +66,7 @@ export default class Main extends React.Component {
         return (
             <div>
                 <TopBar addItemToDb={this.addItemToDb} />
-                <ItemTable items={this.state.items} removeFromItemList={this.removeFromItemList} />
+                <ItemTable tagCategories={this.state.tagCategories} removeFromItemList={this.removeFromItemList} />
             </div>
         )
     }

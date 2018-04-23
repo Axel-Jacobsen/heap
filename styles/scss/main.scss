@@ -4,7 +4,7 @@
 @import 'additem';
 
 body {
-    background-color: #7998f3;
+    background-color: $heapMain;
     -webkit-app-region: drag;
     margin-top: 1rem;
     width: 100%;
@@ -34,14 +34,14 @@ input, button {
 }
 
 .paper {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px 0 $shadow, 0 4px 8px 0 $shadow;
+    background-color: $whiteGrey;
     border-radius: 12px;
     overflow: auto;
 
     .light {
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-        background-color: #b4c5f3;
+        box-shadow: 0 2px 2px 0 $shadow-light, 0 2px 2px 0 $shadow-light;
+        background-color: $heapMain-light;
     }
 }
 

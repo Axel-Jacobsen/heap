@@ -4,7 +4,6 @@
 
 .columnNames {
   font: 23px "Quicksand";
-  font-weight: 300;
   color: #272626;
   display: flex;
   margin-top: 0px;
@@ -22,10 +21,15 @@
 
 .message {
   font: 23px "Quicksand";
-  color: #666666;
+  color: #929496;
   margin-top: 1.5em;
   padding: 0.5em;
   text-align: center; }
+
+.tag {
+  font: 18px "Quicksand";
+  font-weight: 300;
+  margin: 12px 0 12px 0; }
 
 .item {
   font: 20px "Quicksand";
@@ -74,7 +78,7 @@
     text-align: right;
     margin-right: 48px; }
   .topbar .add:hover {
-    color: #494848; }
+    color: #929496; }
   .topbar .currentdate {
     width: 300px; }
   .topbar .currenttime {
@@ -92,7 +96,7 @@ input {
   font-size: 14px; }
 
 input:focus {
-  background-color: #C0D0FF; }
+  background-color: #b4c5f3; }
 
 input[type=number] {
   width: 3rem;
@@ -173,7 +177,7 @@ input, button {
   border-radius: 12px;
   overflow: auto; }
   .paper .light {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.102), 0 2px 2px 0 rgba(0, 0, 0, 0.102);
     background-color: #b4c5f3; }
 
 .verticalColumn {

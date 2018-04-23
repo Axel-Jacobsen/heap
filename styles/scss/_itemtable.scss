@@ -6,8 +6,8 @@
 
 .columnNames {
     font: 23px "Quicksand";
-    font-weight: 300;
-    color: #272626;
+    // font-weight: 300;
+    color: $blackIsh;
     display: flex;
     margin-top: 0px;
     justify-content: space-between;
@@ -33,8 +33,15 @@
 
 .message {
     font: 23px "Quicksand";
-    color: #666666;
+    color: $greyBlue;
     margin-top: 1.5em;
     padding: 0.5em;
     text-align: center;
+}
+
+.tag {
+    font: 18px "Quicksand";
+    font-weight: 300;
+    // margin-left: $smallMargin;
+    margin: $smallMargin 0 $smallMargin 0;
 }
