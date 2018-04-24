@@ -10,7 +10,7 @@ input {
 }
 
 input:focus {
-    background-color: #C0D0FF;
+    background-color: $heapMain-light;
 }
 
 input[type=number] {
@@ -52,23 +52,23 @@ input::-webkit-inner-spin-button {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder{
-    color: #929496;
+    color: $greyBlue;
     text-shadow: none;
     -webkit-text-fill-color: initial;
 }
 
 input.form-error {
-    border: 1px solid #f05e5e;
-    background-color: #f3a9a9;
+    border: 1px solid $errorRed;
+    background-color: $errorRed-light;
 }
 
 input.form-error#dueDay {
-    border-right: 1px solid #f05e5e
+    border-right: 1px solid $errorRed
 }
 
 .error-message {
     font: 18px "Quicksand";
-    color: #d47878;
+    color: $errorRed-matte;
     margin-top: 0.5em;
     padding: 0.5em;
     text-align: center;

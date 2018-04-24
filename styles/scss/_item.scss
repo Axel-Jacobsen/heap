@@ -9,7 +9,7 @@
     margin-left: 12px;
     margin-right: 12px;
     &:hover {
-        background-color: #b4c5f3;
+        background-color: $heapMain-light;
     }
     &:first-child {
         margin-top: 12px;
@@ -20,7 +20,7 @@
 }
 
 .item-active {
-    background-color: #b4c5f3;
+    background-color: $heapMain-light;
 }
 
 .name {

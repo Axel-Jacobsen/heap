@@ -156,6 +156,7 @@ export default class Topbar extends React.Component {
                 {showForm ? (
                     <form onSubmit={this.handleSubmit} id='itemForm' className='horizontal itemForm'>
                         <input id='name' name='name' type='text' placeholder='name' onChange={this.handleChange} autoFocus />
+                        <input id='tag' name='tag' type='text' placeholder='tag' onChange={this.handleChange} />
                         <input id='notes' name='notes' type='text' placeholder='notes' onChange={this.handleChange} />
                         <input id='dueDay' name='dueDay' type='number' placeholder='dd' onChange={this.handleChange} />
                         <input id='dueMonth' name='dueMonth' type='number' placeholder='mm' onChange={this.handleChange} />
