@@ -1,5 +1,7 @@
 'use babel'
 
+const { dialog } = require('electron').remote
+import { BrowserWindow } from 'electron'
 import React from 'react'
 import CurrentTime from './CurrentTime'
 import CurrentDate from './CurrentDate'
@@ -40,7 +42,7 @@ export default class Topbar extends React.Component {
         let date = this.state.formData.dueDay
         let month = this.state.formData.dueMonth
         let priority = this.state.formData.priority
-        
+
         this.addFormInput('dueDay', parseInt(date, 10))
         this.addFormInput('dueMonth', parseInt(month, 10))
         this.addFormInput('priority', parseInt(priority, 10))
@@ -107,8 +109,12 @@ export default class Topbar extends React.Component {
             result = 'the name is required'
         }
 
-        if (!result && !formData.notes) {            
-            result = 'the notes is required'
+        if (!result && !formData.tag) {
+            result = 'the tag is required'
+        }
+
+        if (!result && this.verifyURL(formData.URL)) {
+            result = 'enter a valid url'
         }
 
         if (!result && !formData.dueDay) {
@@ -126,10 +132,24 @@ export default class Topbar extends React.Component {
         return result
     }
 
+    // hyper weak url validator
+    verifyURL(str) {
+        return str ? !str.includes('\t') && !str.includes(' ') && str.includes('.') : truegh
+    }
+
     addFormInput(field, val) {
         let formData = Object.assign({}, this.state.formData)
         formData[field] = val
         this.setState({ formData })
+    }
+
+    openPDFFile() {
+        let opts = {
+            filters: [{ name: 'PDF', extensions: ['pdf'] }],
+            properties: ['openFile']
+        }
+        let pdfPath = dialog.showOpenDialog(opts)
+        this.addFormInput('pdfPath', pdfPath)
     }
 
     toggleShowForm() {
@@ -157,7 +177,8 @@ export default class Topbar extends React.Component {
                     <form onSubmit={this.handleSubmit} id='itemForm' className='horizontal itemForm'>
                         <input id='name' name='name' type='text' placeholder='name' onChange={this.handleChange} autoFocus />
                         <input id='tag' name='tag' type='text' placeholder='tag' onChange={this.handleChange} />
-                        <input id='notes' name='notes' type='text' placeholder='notes' onChange={this.handleChange} />
+                        <input id='URL' name='URL' type='text' placeholder='URL' className='leftSideButton' onChange={this.handleChange} />
+                        <input id='PDF' name='PDF' type='button' value='pdf' className='rightSideButton' onClick={this.openPDFFile} />
                         <input id='dueDay' name='dueDay' type='number' placeholder='dd' onChange={this.handleChange} />
                         <input id='dueMonth' name='dueMonth' type='number' placeholder='mm' onChange={this.handleChange} />
                         <input id='priority' name='priority' type='number' placeholder='!' onChange={this.handleChange} />
